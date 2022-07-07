@@ -99,7 +99,22 @@ async def telegraphphoto(client, message):
     else:
         await msg.edit_text(f'**📤Uploaded To Telegraph!\n\n👉 <code>https://telegra.ph{response[0]}</code>\n\nJoin @slbotzone**',
             disable_web_page_preview=True,
-        )
+            reply_markup=InlineKeyboardMarkup(
+
+            [
+
+                [
+
+                    InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"),
+
+                    InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
+
+                ],
+
+            ]
+
+        )                
+     )
     finally:
         os.remove(download_location)
 
@@ -115,7 +130,22 @@ async def telegraphvid(client, message):
     else:
         await msg.edit_text(f'**📤 Uploaded To Telegraph!\n\n👉 <code>https://telegra.ph{response[0]}</code>\n\nJoin @slbotzone**',
             disable_web_page_preview=True,
-        )
+            reply_markup=InlineKeyboardMarkup(
+
+            [
+
+                [
+
+                    InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"),
+
+                    InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
+
+                ],
+
+            ]
+
+        )                
+     )
     finally:
         os.remove(download_location)
 
@@ -131,7 +161,22 @@ async def telegraphgif(client, message):
     else:
         await msg.edit_text(f'**📤 Uploaded To Telegraph!\n\n👉 <code>https://telegra.ph{response[0]}</code>\n\nJoin @slbotzone**',
             disable_web_page_preview=True,
-        )
+            reply_markup=InlineKeyboardMarkup(
+
+            [
+
+                [
+
+                    InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"),
+
+                    InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
+
+                ],
+
+            ]
+
+        )                
+     )
     finally:
         os.remove(download_location)
 
