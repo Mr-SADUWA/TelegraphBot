@@ -108,8 +108,6 @@ async def telegraphphoto(client, message):
                     InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"),
 
                     InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
-                    
-                    InlineKeyboardButton('Close', callback_data='close')
 
                 ],
 
@@ -141,8 +139,6 @@ async def telegraphvid(client, message):
                     InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"),
 
                     InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
-                   
-                    InlineKeyboardButton('Close', callback_data='close')
 
                 ],
 
