@@ -35,7 +35,7 @@ async def start(bot, update):
     if not await db.is_user_exist(update.from_user.id):
 	    await db.add_user(update.from_user.id)
 	   
-        
+        await Bot.send_message(
                chat_id=message.chat.id,
                text="""<b>Hello 👋 there! I can upload photos,videos & gif animations to telegraph and provide you the link.
 
@@ -180,6 +180,30 @@ async def telegraph_upload(bot, update):
             ]
         )
     )
+
+@Bot.on_callback_query()
+
+async def button(bot, update):
+
+      cb_data = update.data
+
+      if "help" in cb_data:
+
+        await update.message.delete()
+
+        await help(bot, update.message)
+
+      elif "about" in cb_data:
+
+        await update.message.delete()
+
+        await about(bot, update.message)
+
+      elif "start" in cb_data:
+
+        await update.message.delete()
+
+        await start(bot, update.message)
 
 
 @Bot.on_message(filters.private & filters.command("broadcast") & filters.user(BOT_OWNER) & filters.reply)
