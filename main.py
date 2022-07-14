@@ -35,7 +35,7 @@ async def start(bot, update):
     if not await db.is_user_exist(update.from_user.id):
 	    await db.add_user(update.from_user.id)
 	   
-       await   Bot.send_message(
+       await  Bot.send_message(
                chat_id=message.chat.id,
                text="""<b>Hello 👋 there! I can upload photos,videos & gif animations to telegraph and provide you the link.
 
