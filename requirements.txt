@@ -1,0 +1,6 @@
+Pyrogram==1.4.16
+telegraph
+Pillow
+TgCrypto
+aiohttp
+dnspython
